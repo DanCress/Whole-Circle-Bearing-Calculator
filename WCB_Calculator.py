@@ -9,12 +9,12 @@
 import math
 
 class PointA:
-    E = 258.971 #Input Point A Easting here
-    N = 490.856 #Input Point A Northing here
+    E = 258.971 #USER INPUT POINT A Easting here
+    N = 490.856 #USER INPUT Point A Northing here
     
 class PointB:
-    E = 276.722 #Input Point B Easting here
-    N = 523.555 #Input Point B Easting here
+    E = 276.722 #USER INPUT Point B Easting here
+    N = 523.555 #USER INPUT Point B Northing here
 
 #Calculate Deltas (Point B - Point A)
 
@@ -22,15 +22,16 @@ DE = PointB.E - PointA.E
 DN = PointB.N - PointA.N
 
 #Calculate Quadrant Bearing QAB
+
 QBab = math.atan(abs(DE)/abs(DN))
 
-if DE > 0 and DN > 0:
+if DE > 0 and DN > 0: # B - A, DE = 270 - 260, DN = 520 - 510
     WCBab = QBab
-elif DE > 0 and DN < 0:
+elif DE > 0 and DN < 0: # B - A, DE = 270 - 260, DN = 510 - 520
     WCBab = 3.14159 - QBab
-elif DE < 0 and DN < 0:
-    WCBab = 3.14159 + QBab
-elif DE < 0 and DN > 0:
+elif DE < 0 and DN < 0: # B - A, DE = 260 - 270, DN = 520 - 510
+    WCBab = 3.14159 + QBab 
+elif DE < 0 and DN > 0: # B - A, DE = 260 - 270, DN = 520 - 510
     WCBab = 6.28319 - QBab
 
 if WCBab < 3.14159 :
