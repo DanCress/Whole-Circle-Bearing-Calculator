@@ -29,7 +29,7 @@ if DE > 0 and DN > 0: # B - A, DE = 270 - 260, DN = 520 - 510
     WCBab = QBab
 elif DE > 0 and DN < 0: # B - A, DE = 270 - 260, DN = 510 - 520
     WCBab = 3.14159 - QBab
-elif DE < 0 and DN < 0: # B - A, DE = 260 - 270, DN = 520 - 510
+elif DE < 0 and DN < 0: # B - A, DE = 260 - 270, DN = 510 - 520
     WCBab = 3.14159 + QBab 
 elif DE < 0 and DN > 0: # B - A, DE = 260 - 270, DN = 520 - 510
     WCBab = 6.28319 - QBab
